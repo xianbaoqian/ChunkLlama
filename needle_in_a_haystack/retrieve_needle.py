@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 
 def load_model():
     # pipeline parallelism
-    model = AutoModelForCausalLM.from_pretrained(model_path, attn_implementation="flash_attention_2", device_map="auto",
+    model = AutoModelForCausalLM.from_pretrained(args.model, attn_implementation="flash_attention_2", device_map="auto",
                                                 trust_remote_code=True, torch_dtype=torch.bfloat16)
     model = model.eval()
     return model
