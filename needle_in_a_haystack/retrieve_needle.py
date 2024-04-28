@@ -95,7 +95,7 @@ if __name__ == "__main__":
     if args.dca:
         replace_with_chunkmistral(args.pretraining_length)
 
-    output_name = f"{args.model}.output.jsonl"
+    output_name = f"{args.model.replace('/', '-')}.output.jsonl"
     print("results will be save to:", output_name)
     tokenizer = AutoTokenizer.from_pretrained(args.model, trust_remote_code=True)
     model = load_model()
