@@ -97,7 +97,7 @@ if __name__ == "__main__":
 
     output_name = f"{args.model}.output.jsonl"
     print("results will be save to:", output_name)
-    tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
+    tokenizer = AutoTokenizer.from_pretrained(args.model, trust_remote_code=True)
     model = load_model()
     
     # hyper params
