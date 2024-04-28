@@ -177,9 +177,10 @@ python test_passkey.py --seq_len 16384 --scale 13b (7b/13b/70b)
 We provide a manner to test the passkey retrieval accuracy. For example,
 ```bash
 cd needle_in_a_haystack
-# the following command will generate a jsonl file
+# the following command will generate a jsonl file of the original version
 python retrieve_needle.py --max_length 192k --model mistral --pretraining_length 32384
-# for Llama: python retrieve_needle.py --max_length 192k --model meta-llama/llama-2-7b-chat-hf --pretraining_length 4096
+# this will generate the ChunkLlama file: python retrieve_needle.py --max_length 192k --model mistral --pretraining_length 32384 --dca
+# for Llama: python retrieve_needle.py --max_length 192k --model meta-llama/llama-2-7b-chat-hf --pretraining_length 4096 [--dca]
 # get the figure
 python draw.py 
 ```
