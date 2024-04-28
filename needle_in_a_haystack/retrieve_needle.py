@@ -93,7 +93,10 @@ if __name__ == "__main__":
     
     args = parse_config()
     if args.dca:
-        replace_with_chunkmistral(args.pretraining_length)
+        if 'llama' in args.model.lower():
+            replace_with_chunkllama(args.pretraining_length)
+        elif 'mistral' in args.model.lower():
+            replace_with_chunkmistral(args.pretraining_length)
 
     output_name = f"{args.model.replace('/', '-')}.output.jsonl"
     print("results will be save to:", output_name)
