@@ -89,7 +89,7 @@ def parse_config():
 
 
 if __name__ == "__main__":
-    model_path = "/path/to/model"
+    # model_path = "/path/to/model"
     
     args = parse_config()
     if args.dca:
