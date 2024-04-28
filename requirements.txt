@@ -8,3 +8,5 @@ datasets>=2.14.5
 
 # To parse PDF
 PyMuPDF
+# For needle-in-a-stack
+seaborn
